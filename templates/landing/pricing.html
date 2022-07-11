@@ -1,0 +1,109 @@
+{% extends 'layouts/landing.html' %}
+{%load static%}
+{%block body%}
+
+{% load static %}
+
+
+    <div class="container">
+      <div class="page-banner">
+        <div class="row justify-content-center align-items-center h-100">
+          <div class="col-md-6">
+            <nav aria-label="Breadcrumb">
+              <ul class="breadcrumb justify-content-center py-0 bg-transparent">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active">Pricing</li>
+              </ul>
+            </nav>
+            <h1 class="text-center">Pricing</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+
+  <div class="page-section">
+    <div class="container">
+      <div class="text-center wow fadeInUp">
+        <div class="subhead">Pricing Plan</div>
+        <h2 class="title-section">Choose plan the right for you</h2>
+        <div class="divider mx-auto"></div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-lg-4 py-3 wow zoomIn">
+          <div class="card-pricing">
+            <div class="header">
+              <div class="pricing-type">Free</div>
+              <div class="price">
+                <span class="dollar">$</span>
+                <h1>0<span class="suffix">.00</span></h1>
+              </div>
+              <h5>Per Month</h5>
+            </div>
+            <div class="body">
+              <!-- <p>25 Analytics <span class="suffix">Campaign</span></p> -->
+              <p>3000 Characters <span class="suffix">Per Month</span></p>
+              <p>All Use Cases</p>
+              <p>30+ Languages</p>
+              <p>All Voice Tones</p>
+
+            </div>
+            <div class="footer">
+              <a href="#" class="btn btn-pricing btn-block">Start for Free</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 py-3 wow zoomIn">
+          <div class="card-pricing marked">
+            <div class="header">
+              <div class="pricing-type">Starter Writer</div>
+              <div class="price">
+                <span class="dollar">$</span>
+                <h1>9<span class="suffix">.99</span></h1>
+              </div>
+              <h5>Per Month</h5>
+            </div>
+            <div class="body">
+              <p>40000 Characters <span class="suffix">Per Month</span></p>
+              <p>All Use Cases</p>
+              <p>30+ Languages</p>
+              <p>All Voice Tones</p>
+            </div>
+            <div class="footer">
+              <a href="#" class="btn btn-pricing btn-block">Subscribe</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 py-3 wow zoomIn">
+          <div class="card-pricing">
+            <div class="header">
+              <div class="pricing-type">Advance Writer</div>
+              <div class="price">
+                <span class="dollar">$</span>
+                <h1>29<span class="suffix">.99</span></h1>
+              </div>
+              <h5>Per Month</h5>
+            </div>
+            <div class="body">
+              <p>*Unlimited <span class="suffix">Per Month</span></p>
+              <p>All Use Cases</p>
+              <p>30+ Languages</p>
+              <p>All Voice Tones</p>
+            </div>
+            <div class="footer">
+              <a href="#" class="btn btn-pricing btn-block">Subscribe</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div> <!-- .container -->
+  </div> <!-- .page-section -->
+
+
+
+  {%endblock%}

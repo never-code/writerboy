@@ -1,0 +1,15 @@
+.page-footer{
+    background-image: url('../img/world_pattern.png');
+}
+
+.imhg{
+    background-image: url('../img/bg_pattern.png');
+}
+
+.logo-image{
+    width: 200px;
+    height: auto;
+    margin-top: -6px;
+}
+
+

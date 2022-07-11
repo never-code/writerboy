@@ -1,0 +1,255 @@
+{% extends 'layouts/landing.html' %}
+{%load static%}
+{%block body%}
+    <div class="container">
+      <div class="page-banner home-banner">
+        <div class="row align-items-center flex-wrap-reverse h-100">
+          <div class="col-md-6 py-5 wow fadeInLeft">
+            <h1 class="mb-4">Meet WriterBoy</h1>
+            <p class="text-lg text-grey mb-5">Welcome to Writerboy.net, the online AI content generator! Here you can find all the tools and resources you need to create high-quality content for your website or blog. Whether you're a beginner looking for inspiration or an experienced writer looking for new ideas, we've got you covered.</p>
+            <a href="#" class="btn btn-primary">Get Started</a>
+          </div>
+          <div class="col-md-6 py-5 wow zoomIn">
+            <div class="img-fluid text-center">
+              <!-- <img src="{ %static 'landing/img/banner_image_1.png' %}" alt=""> -->
+              <img src="{% static 'landing/img/banner_image_1.png' %}" style="width: 100%; height: auto;"   alt="AI Blog Writing Assistant">
+
+            </div>
+          </div>
+        </div>
+        <a href="#about" class="btn-scroll" data-role="smoothscroll"><span class="mai-arrow-down"></span></a>
+      </div>
+    </div>
+  </header>
+
+  <div class="page-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="card-service wow fadeInUp">
+            <div class="header">
+              <img src="{% static 'landing/img/services/service-1.svg' %}" alt="">
+            </div>
+            <div class="body">
+              <h5 class="text-secondary">Blog Writing Assistance </h5>
+              <p>The AI-powered blog writing assistant is a tool that makes it easy to create and manage your blog content, and helps you see the results immediately.</p>
+              <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card-service wow fadeInUp">
+            <div class="header">
+              <img src="{% static 'landing/img/services/service-2.svg' %}" alt="">
+            </div>
+            <div class="body">
+              <h5 class="text-secondary">Content Marketing</h5>
+              <p>Our AI Marketing content creation service enables you to create content that is both engaging and effective, including articles, blogs, social media content, and more.</p>
+              <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card-service wow fadeInUp">
+            <div class="header">
+              <img src="{% static 'landing/img/services/service-3.svg' %}" alt="">
+            </div>
+            <div class="body">
+              <h5 class="text-secondary">Social Media Help</h5>
+              <p>The AI social media help product is to help businesses with their social media strategy. It is the perfect tool for promoting your businesses & products on the internet. 
+              </p>
+              <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- .container -->
+  </div> <!-- .page-section -->
+
+  <div class="page-section" id="about">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 py-3 wow fadeInUp">
+          <span class="subhead">About us</span>
+          <h2 class="title-section">WriterBoy Blog Writing Assistant</h2>
+          <div class="divider"></div>
+          <p>WriterBoy is an AI blog writing assistant that helps you create high quality, engaging content for your blog. With WriterBoy, you can easily transform ideas, research topics and create well-written, informative blog posts quickly and easily.</p> 
+          <p>Get stared for Free with WriterBoy blog writing assistant, get rid of your writers block today and see what WriterBoy can do.</p>
+          <a href="about.html" class="btn btn-primary mt-3">Read More</a>
+        </div>
+        <div class="col-lg-6 py-3 wow fadeInRight">
+          <div class="img-fluid py-3 text-center">
+            <img src="{% static 'landing/img/about_frame.png' %}" style="width: 100%; height:auto;" alt="">
+          </div>
+        </div>
+      </div>
+    </div> <!-- .container -->
+  </div> <!-- .page-section -->
+
+
+
+  <div class="page-section">
+    <div class="container">
+      <div class="text-center wow fadeInUp">
+        <div class="subhead">Pricing Plan</div>
+        <h2 class="title-section">Choose plan the right for you</h2>
+        <div class="divider mx-auto"></div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-lg-4 py-3 wow zoomIn">
+          <div class="card-pricing">
+            <div class="header">
+              <div class="pricing-type">Free</div>
+              <div class="price">
+                <span class="dollar">$</span>
+                <h1>0<span class="suffix">.00</span></h1>
+              </div>
+              <h5>Per Month</h5>
+            </div>
+            <div class="body">
+              <!-- <p>25 Analytics <span class="suffix">Campaign</span></p> -->
+              <p>3000 Characters <span class="suffix">Per Month</span></p>
+              <p>All Use Cases</p>
+              <p>30+ Languages</p>
+              <p>All Voice Tones</p>
+
+            </div>
+            <div class="footer">
+              <a href="#" class="btn btn-pricing btn-block">Start for Free</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 py-3 wow zoomIn">
+          <div class="card-pricing marked">
+            <div class="header">
+              <div class="pricing-type">Starter Writer</div>
+              <div class="price">
+                <span class="dollar">$</span>
+                <h1>9<span class="suffix">.99</span></h1>
+              </div>
+              <h5>Per Month</h5>
+            </div>
+            <div class="body">
+              <p>40000 Characters <span class="suffix">Per Month</span></p>
+              <p>All Use Cases</p>
+              <p>30+ Languages</p>
+              <p>All Voice Tones</p>
+            </div>
+            <div class="footer">
+              <a href="#" class="btn btn-pricing btn-block">Subscribe</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 py-3 wow zoomIn">
+          <div class="card-pricing">
+            <div class="header">
+              <div class="pricing-type">Advance Writer</div>
+              <div class="price">
+                <span class="dollar">$</span>
+                <h1>29<span class="suffix">.99</span></h1>
+              </div>
+              <h5>Per Month</h5>
+            </div>
+            <div class="body">
+              <p>*Unlimited <span class="suffix">Per Month</span></p>
+              <p>All Use Cases</p>
+              <p>30+ Languages</p>
+              <p>All Voice Tones</p>
+            </div>
+            <div class="footer">
+              <a href="#" class="btn btn-pricing btn-block">Subscribe</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div> <!-- .container -->
+  </div> <!-- .page-section -->
+
+  <!-- Banner info -->
+  <div class="page-section banner-info">
+    <div class="wrap imhg bg-image" >
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 py-3 pr-lg-5 wow fadeInUp">
+            <h2 class="title-section">AI Powered Content Creation</h2>
+            <div class="divider"></div>
+            <p>If you are looking for an Al-powered content creation assistant, look no
+              further than WriterBoy Al Marketing Content Generator. This tool uses
+              artificial intelligence to help you generate high-quality content for your
+              website or blog. With WriterBoy Al, you can get help with brainstorming
+              ideas, creating outlines, and even writing and editing your content.
+              Get started for free with artificial intelligence today with the WriterBoy Al
+              Marketing Content Generator.</p>  
+          </div>
+          <div class="col-lg-6 py-3 wow fadeInRight">
+            <div class="img-fluid text-center">
+              <img src="{% static 'landing/img/banner_image_2.png' %}" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- .wrap -->
+  </div> <!-- .page-section -->
+
+  <!-- Blog -->
+  <div class="page-section">
+    <div class="container">
+      <div class="text-center wow fadeInUp">
+        <div class="subhead">Our Blog</div>
+        <h2 class="title-section">Read Latest News</h2>
+        <div class="divider mx-auto"></div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-lg-4 py-3 wow fadeInUp">
+          <div class="card-blog">
+            <div class="header">
+              <div class="post-thumb">
+                <img src="{%static 'landing/img/blog/blog-1.jpg' %}" alt="">
+              </div>
+            </div>
+            <div class="body">
+              <h5 class="post-title"><a href="#">Source of Content Inspiration</a></h5>
+              <div class="post-date">Posted on <a href="#">27 Jan 2020</a></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 py-3 wow fadeInUp">
+          <div class="card-blog">
+            <div class="header">
+              <div class="post-thumb">
+                <img src="{% static 'landing/img/blog/blog-2.jpg' %}" alt="">
+              </div>
+            </div>
+            <div class="body">
+              <h5 class="post-title"><a href="#">Source of Content Inspiration</a></h5>
+              <div class="post-date">Posted on <a href="#">27 Jan 2020</a></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 py-3 wow fadeInUp">
+          <div class="card-blog">
+            <div class="header">
+              <div class="post-thumb">
+                <img src="{%static 'landing/img/blog/blog-3.jpg' %}" alt="">
+              </div>
+            </div>
+            <div class="body">
+              <h5 class="post-title"><a href="#">Source of Content Inspiration</a></h5>
+              <div class="post-date">Posted on <a href="#">27 Jan 2020</a></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 mt-4 text-center wow fadeInUp">
+          <a href="blog.html" class="btn btn-primary">View More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+{%endblock%}
