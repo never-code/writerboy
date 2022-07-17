@@ -1,0 +1,64 @@
+
+{% extends 'layouts/dashboard.html' %}
+{% load static %}
+{% block body %}
+
+
+<div class="container-fluid flex-grow-1 container-p-y">
+    <div class="row">
+        <div class="col-lg-1"></div>
+
+        <div class="col-lg-10">
+          <form class="" action="#" method="post">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-lg-8">
+                    <h2 class="mb-3">Select the Blog Sections that you would like to include in the Blog.</h2>
+                    <p>These blog topics will be used to generate blog sections and you be charged for the token used</p>
+                    <table class="table table-hover mt-3">
+                        <thead>
+                            <tr>
+                                <th>Select</th>
+                                <th>Topic</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            {% for section in blogSections %}
+                            <tr>
+                                <td>
+                                    <div class='form-check form-switch mb-2'>
+                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" name="{{section}}" />
+                                    </div>
+                                    <!-- <input class="form-control" type="checkbox" name="{{section}}" value=""> -->
+                                </td>
+                                <td>
+                                    {{section}}
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-lg-4">
+                    <img class="img-fluid" src="{% static 'admin/img/create-blog.svg' %}" alt="Create Blog">
+                    <br>
+                    <div class="mt-5">
+                        <button type="submit" class="btn btn-primary btn-block">GENERATE FULL BLOG</button>
+                    </div>
+                    
+                </div>
+            </div>  
+          </form>
+        </div>
+        <div class="col-lg-1"></div>
+
+    </div>
+  </div>
+
+{%endblock%}
+<!-- 
+<div class="form-check form-switch mb-2">
+    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
+    <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>
+  </div> -->

@@ -1,0 +1,113 @@
+{% extends 'layouts/dashboard.html' %}
+{% load static %}
+{%load crispy_forms_tags %}
+
+
+
+
+{% block body %}
+
+
+
+<div class="container-xxl flex-grow-1 container-p-y">
+  <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Account Settings /</span> Billing</h4>
+
+  <div class="row">
+    <div class="col-md-12">
+      <ul class="nav nav-pills flex-column flex-md-row mb-3">
+        <li class="nav-item">
+          <a class="nav-link active" href="#"><i class="bx bx-user me-1"></i> Billing</a>
+        </li>       
+      </ul>
+    
+      <div class="card">
+        <h5 class="card-header">Billing Information</h5>
+        <div class="card-body">
+          <div class="mb-3 col-12 mb-0">
+
+            <script src="https://www.paypal.com/sdk/js?client-id=AWqR1drl3yN75Cc3JSczsaJGASFuRZ4xp4EA4PxuF6iaeoeS2zvar50gjE0W30zJYiQFa6KsLL1jCDyi&vault=true&intent=subscription"> </script>
+          
+
+            {% if user.profile.subscriptionType == 'free' %}
+            <div class="alert alert-warning">
+              <h6 class="alert-heading fw-bold mb-1">You are currently on the Free Tier</h6>
+              <p class="mb-0">You can cancel your subscription at any time, no strings attached. Upgrade to the starter Tier to get upto <strong>40,000 words</strong>  per month.</p>
+            </div> 
+            <!-- <button class="btn btn-primary" type="button">
+                <i class="tf-icons bx bx-money"></i> Upgrade Subscription
+            </button> -->
+            <div id="paypal-button-container-1"></div>
+
+            {% elif user.profile.subscriptionType == 'starter' %}
+            <div class="alert alert-info">
+                <h6 class="alert-heading fw-bold mb-1">You are currently on the Starter Tier</h6>
+                <p class="mb-0">You can cancel your subscription at any time, no strings attached. Upgrade to the advanced Tier for unlimited words.</p>
+              </div> 
+              <!-- <button class="btn btn-primary" type="button">
+                  <i class="tf-icons bx bx-money"></i> Upgrade Subscription
+              </button> -->
+
+              <div id="paypal-button-container-2"></div>
+
+              {% elif user.profile.subscriptionType == 'advanced' %}
+              <div class="alert alert-success">
+                <h6 class="alert-heading fw-bold mb-1">You are currently on the Advanced Tier</h6>
+                <p class="mb-0">You can cancel your subscription at any time, no strings attached.</p>
+              </div> 
+            {% else %}
+            <h1>Something went wrong</h1>
+            {% endif %}
+          </div>
+          
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{%endblock%}
+
+
+
+{% block js %}
+
+
+<script>
+    paypal.Buttons({
+      createSubscription: function(data, actions) {
+        return actions.subscription.create({
+          'plan_id': 'P-82L606297R757615AMLJS73I' // Creates the Starter Plan subscription
+        });
+      },
+      onApprove: function(data, actions) {
+        alert('You have successfully created subscription ' + data.subscriptionID); // Optional message given to subscriber
+      },
+      onCancel: function (data) {
+        alert('You have cancelled your subscription: (');
+      }
+    }).render('#paypal-button-container-1'); // Renders the PayPal button
+  </script>
+
+
+
+<script>
+    paypal.Buttons({
+      createSubscription: function(data, actions) {
+        return actions.subscription.create({
+          'plan_id': 'P-1JD36714EY899833AMLJTDQY' // Creates the Starter Plan subscription
+        });
+      },
+      onApprove: function(data, actions) {
+        alert('You have successfully created subscription ' + data.subscriptionID); // Optional message given to subscriber
+      },
+      onCancel: function (data) {
+        alert('You have cancelled your subscription: (');
+      }
+    }).render('#paypal-button-container-2'); // Renders the PayPal button
+  </script>
+
+
+{% endblock %}

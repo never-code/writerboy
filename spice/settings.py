@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'landing',
     'authorization',
     'dashboard',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -120,6 +121,10 @@ USE_TZ = True
 # LOGIN_REDIRECT_URL = 'dashboard'
 LOGIN_URL = 'login'
 
+#OPENAI_API_KEY
+OPENAI_API_KEY= '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'
+
+
 DJANGORESIZED_DEFAULT_SIZE = [500, 500]
 DJANGORESIZED_DEFAULT_QUALITY = 75
 DJANGORESIZED_DEFAULT_KEEP_META = True
@@ -142,5 +147,5 @@ MEDIA_URL = '/uploads/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
+ 
 
